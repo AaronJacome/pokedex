@@ -1,5 +1,5 @@
 var url = window.location.href;
-var swLocation = 'pokedex/#/sw.js';
+var swLocation = '/pokedex/sw.js';
 
 var swReg;
 
