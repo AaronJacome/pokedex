@@ -1,0 +1,11 @@
+<div *ngIf="pokemons">
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let pokemon of pokemons.results">
+      <span (click)="pokemonDetail(pokemon.url)">{{pokemon.name}}</span>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-paginator [length]="pokemons.count" [pageSize]="pageSize"
+    (page)="changePage($event)">
+  </mat-paginator>
+</div>

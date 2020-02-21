@@ -1,0 +1,10 @@
+<h1>My Favorites</h1>
+<hr>
+
+<div *ngIf="pokemons">
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let pokemon of pokemons">
+      <span (click)="pokemonDetail(pokemon.id)">{{pokemon.name}}</span>
+    </mat-list-item>
+  </mat-list>
+</div>
