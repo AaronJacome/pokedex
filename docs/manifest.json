@@ -2,7 +2,7 @@
   "name": "Pokedex",
   "short_name": "Pokedex",
   "description": "All information about the first 900 pokemon",
-  "start_url": "/",
+  "start_url": "/pokedex",
   "background_color": "#fff",
   "theme_color": "#fff",
   "display": "standalone",
