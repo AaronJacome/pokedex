@@ -1,22 +1,20 @@
 {
-    "short_name": "Pokedex",
-    "name": "Pokedex",
-    "description": "All information about the first 900 pokemon",
-    "icons": [
-      {
-        "src": "/img/icon-192.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "/img/icon-512.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ],
-    "start_url": "/",
-    "background_color": "#FFF",
-    "display": "standalone",
-    "scope": "/",
-    "theme_color": "#FFF"
-  }
+  "name": "Pokedex",
+  "short_name": "Pokedex",
+  "description": "All information about the first 900 pokemon",
+  "start_url": "/",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "/img/icons/icon_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icons/icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
