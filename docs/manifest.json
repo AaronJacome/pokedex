@@ -4,12 +4,12 @@
     "description": "All information about the first 900 pokemon",
     "icons": [
       {
-        "src": "/img/icons-192.png",
+        "src": "/img/icon-192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/img/icons-512.png",
+        "src": "/img/icon-512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
