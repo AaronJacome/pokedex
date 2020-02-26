@@ -4,14 +4,14 @@ const CACHE_INMUTABLE_NAME = 'inmutable-v1'
 
 var urlsToCacheStatic = [
     '/',
-    '/runtime.26209474bfa8dc87a77c.js',
-    '/styles.1c31ac86b354a7056d66.css',
-    '/polyfills.8bbb231b43165d65d357.js',
-    '/main.40e5d6b2eb5ce3d46bc7.js',
-    '/index.html',
-    'favicon.ico',
-    '/es2015-polyfills.b0657154bc33c6ff11ae.js',
-    '/js/app.js',
+    'runtime.26209474bfa8dc87a77c.js',
+    'styles.1c31ac86b354a7056d66.css',
+    'polyfills.8bbb231b43165d65d357.js',
+    'main.40e5d6b2eb5ce3d46bc7.js',
+    'index.html',
+    'avicon.ico',
+    'es2015-polyfills.b0657154bc33c6ff11ae.js',
+    'js/app.js',
     'https://pokeapi.co/api/v2/pokemon'
 ];
 
