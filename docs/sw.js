@@ -12,7 +12,8 @@ var urlsToCacheStatic = [
     'favicon.ico',
     'es2015-polyfills.b0657154bc33c6ff11ae.js',
     'js/app.js',
-    'https://pokeapi.co/api/v2/pokemon'
+    'https://pokeapi.co/api/v2/pokemon',
+    'flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.0509ab09c1b0d2200a41.woff2'
 ];
 
 const CACHE_DYNAMIC_LIMIT = 50
@@ -36,28 +37,30 @@ self.addEventListener('install', e => {
 })
 
 self.addEventListener('fetch', e => {
-    // 4 - Cache with Network update
-    // Rendimiento es critico
-    // Actualización Siempre estarán un paso atras
+    console.log("URL: ", e.request.url)
+    const promiseCache = caches.match(e.request)
+        .then(response => {
+            console.log("Response: ", response)
+            if (response != undefined) {
+                return caches.match(e.request)
+            } else {
+                return caches.open(CACHE_DYNAMIC_NAME)
+                    .then(cache => {
+                        fetch(e.request)
+                            .then(response => {
+                                console.log("guardando Url:", e.request.url)
+                                cache.put(e.request, response)
+                            })
 
-    const promiseCache = caches.open(CACHE_STATIC_NAME)
-        .then(cache => {
-            try {
-                fetch(e.request)
-                    .then(response => {
-                        cache.put(e.request, response)
+                        if (navigator.onLine) {
+                            return fetch(e.request)
+                        } else {
+                            return caches.match(e.request)
+                        }
+
                     })
-
-                return cache.match(e.request)
-            }catch{
-                if(/\.(png|jpg|svg)$/i.test(e.request.url)){
-                    resolve(caches.match('/img/not-found.png'))
-                }
             }
-
         })
 
     e.respondWith(promiseCache)
-
-
 })
